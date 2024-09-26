@@ -1,0 +1,129 @@
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.top-tags {
+  bottom: auto;
+  top: 35px;
+}
+
+.tags {
+  color: #09568a;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  font-size: 18px;
+  font-family: 'La Belle Aurore', cursive;
+}
+.bottom-tags-html {
+  margin-left: -20px;
+}
+
+.container {
+  width: 100%;
+  will-change: contents;
+  height: 90%;
+  min-height: 566px;
+  position: absolute;
+  opacity: 0;
+  top: 5%;
+  margin: 0 auto;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+.about-page,
+.contact-page,
+.portfolio-page {
+  h1 {
+    font-size: 53px;
+    font-weight: 'Coolvetica';
+    color: #09568a;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 40px;
+    left: 10px;
+
+    &::before {
+      content: '<h1/>';
+      font-family: 'La Belle Aurore';
+      font-size: 18px;
+      position: absolute;
+      margin-top: -10px;
+      opacity: 0.7;
+      line-height: 18px;
+    }
+
+    &::after {
+      content: '<h1/>';
+      font-family: 'La Belle Aurore';
+      font-size: 18px;
+      position: absolute;
+      opacity: 0.7;
+      line-height: 18px;
+      left: -10px;
+      bottom: -20px;
+      margin-left: 20px;
+    }
+  }
+  p {
+    font-size: 15px;
+    font-family: sans-serif;
+    color: #a9a5a3;
+    font-weight: 300;
+    min-width: fit-content;
+    animation: pulse 1s;
+
+    &:nth-of-type(1) {
+      animation-delay: 1.1s;
+    }
+    &:nth-of-type(2) {
+      animation-delay: 1.2s;
+    }
+    &:nth-of-type(3) {
+      animation-delay: 1.3s;
+    }
+  }
+
+  .text-zone {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+
+    @media (max-width: 650px) {
+      left: 25% !important ;
+      width: 70% !important;
+    }
+    @media (max-width: 1100px) {
+      left: 25%;
+      width: 60%;
+    }
+  }
+
+  .text-animate-hover {
+    &:hover {
+      color: #a9a5a3;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .page {
+    position: initial;
+  }
+
+  .bottom-tag-html,
+  .top-tags,
+  .bottom-tags {
+    display: none;
+  }
+}
