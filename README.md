@@ -44,4 +44,4 @@ Twitter: https://x.com/meryemozkanmltm <br>
 
 <h1> 🔗 GIF </h1>
 
-![](mages/My_Portfolio.gif)
+![](images/My_Portfolio.gif)
